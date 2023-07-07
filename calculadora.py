@@ -6,21 +6,22 @@
 # 4 - Divisão
 # Caso seja inserido um número de operação que não exista, o resultado deverá ser 0.
 
+
+def calculadora(n1, n2, operando):
+    if operando == '1':
+        return n1 + n2
+    elif operando == '2':
+        return n1 - n2
+    elif operando == '3':
+        return n1 * n2
+    elif operando == '4':
+        return n1 / n2
+    else:
+        return 0
+
 n1 = int(input('Digite o primeiro valor:\n'))
 n2 = int(input('Digite o segundo valor:\n'))
-operando = input('Digite o número de acordo com o operando desejado;\n 1 - Soma\n 2 - Subtração\n 3 - Multiplicação\n 4 - Divisão\n')
+operando = input('Digite o número de acordo com o operando desejado:\n 1 - Soma\n 2 - Subtração\n 3 - Multiplicação\n 4 - Divisão\n')
 
-if operando == '1':
-  soma = n1 + n2
-  print(f'{n1} + {n2} = {soma}')
-elif operando == '2':
-  subt = n1 - n2
-  print(f'{n1} - {n2} = {subt}')
-elif operando == '3':
-  multi = n1 * n2
-  print(f'{n1} * {n2} = {multi}')  
-elif operando == '4':
-  divisao = n1 / n2
-  print(f'{n1} / {n2} = {divisao}')    
-else:
-  print('0')      
+resultado = calculadora(n1, n2, operando)  # Corrigido: chamando a função calculadora com os argumentos corretos
+print(resultado)
